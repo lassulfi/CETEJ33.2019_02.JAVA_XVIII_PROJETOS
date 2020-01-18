@@ -53,6 +53,10 @@ local.properties
 .apt_generated_test/
 
 # Scala IDE specific (Scala & Java development for Eclipse)
+
+# Attach Files
+*.attach*
+
 .cache-main
 .scala_dependencies
 .worksheet

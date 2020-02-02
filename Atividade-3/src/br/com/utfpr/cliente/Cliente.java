@@ -28,7 +28,8 @@ public class Cliente {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
 			while(true) {
-				System.out.print("\nDigite uma mensagem para converter para uppercase: ");
+				System.out.print("\nDigite uma mensagem para converter para uppercase ou "
+						+ "digite sair para encerrar a aplicação: ");
 				String message = reader.readLine();
 				output.writeUTF(message);
 				if(message.equalsIgnoreCase("sair")) {

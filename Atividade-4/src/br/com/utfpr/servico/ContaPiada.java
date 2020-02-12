@@ -5,6 +5,15 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * <h3>Classe de serviço para leitura de um arquivo contendo piadas</h3>
+ * 
+ * <p>As piadas estao disponiveis no arquivo piada.txt.
+ * O arquivo é estruturado de modo que cada linha do arquivo contém uma piada.</p>
+ * 
+ * @author lassulfi
+ *
+ */
 public class ContaPiada {
 
 	private static final String FILENAME = "piadas.txt";
@@ -15,6 +24,9 @@ public class ContaPiada {
 		
 	}
 	
+	/**
+	 * Abre o arquivo para leitura
+	 */
 	public void abrirArquivo() {
 		try {
 			reader = new BufferedReader(new FileReader(FILENAME));
@@ -24,6 +36,12 @@ public class ContaPiada {
 		}
 	}
 	
+	/**
+	 * Le uma piada do arquivo em uma linha do arquivo.
+	 * 
+	 * @return String contendo uma piada
+	 * @throws IOException
+	 */
 	public String lerPiada() throws IOException {
 		String mensagemEndOfFile = "Sem mais piadas para enviar";
 		
@@ -32,6 +50,9 @@ public class ContaPiada {
 		return piada != null ? piada : mensagemEndOfFile; 
 	}
 	
+	/**
+	 * Fecha a instancia {@link BufferedReader}
+	 */
 	public void fechaReader() {
 		if(reader != null)
 			try {

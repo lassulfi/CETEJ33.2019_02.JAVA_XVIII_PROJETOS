@@ -14,7 +14,7 @@ public class CalculadoraServidor {
 			System.out.println("Servidor pronto.");
 			
 		} catch (Exception e) {
-			a
+			System.out.printf("Erro no RMI: %s", e.getMessage());
 		}
 	}
 }
